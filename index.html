@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>图片在线Base64转换</title>
+  <title>图片Base64转换工具</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./imgaes/favicon.png">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
-    <input type="file" onchange="previewFile()"><br>
-    <div id="preview"></div>
-    <div id="code"></div>
-  <script src="main.js"></script>
+  <div class="container">
+    <h2>
+     <img src="./imgaes/favicon.png" class="logo" alt="">
+      转换图片为Base64编码
+    </h2>
+
+    <section class="content">
+      <h4>说明</h4>
+      <p>将图片转换为Base64编码，可以让你很方便地在没有上传文件的条件下将图片插入其它的网页、编辑器中。 这对于一些小的图片是极为方便的，因为你不需要再去寻找一个保存图片的地方。 （推荐不要转换大于30KB的图像）</p>
+    </section>
+    <section class="content">
+      <h4>用法</h4>
+      <p>只需要将生成的 base64 字符串填写到 img.src 即可</p>
+    </section>
+
+    <div class="file-upload">
+      <input type="file" onchange="previewFile()">
+    </div>
+    <div class="code-preview">
+      <textarea id="code" ></textarea>
+      <button id="cut" class="copy" data-clipboard-action="cut" >
+        复制到剪切板
+    </button>
+    </div>
+
+  </div>
+  <script src="./clipboard.min.js"></script>
+  <script src="./main.js"></script>
 </body>
+
 </html>
