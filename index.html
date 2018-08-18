@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>图片Base64在线转换工具</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keyword" content="Base64 图片 在线转换工具 png jpg"> 
-  <meta name="description" content="图片转换为Base64的在线工具" > 
+  <meta name="keyword" content="Base64 图片 在线转换工具 png jpg">
+  <meta name="description" content="图片转换为Base64的在线工具">
+  <meta name="google-site-verification" content="dgvt3U_uqyQHGrm9xUEVFnAo2tRi4ZTMKgvSav_TNCA" />
   <link rel="icon" type="image/x-icon" href="./imgaes/favicon.png">
   <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css" />
 </head>
@@ -15,8 +16,7 @@
 <body>
   <div class="container">
     <h2>
-     <img src="./imgaes/favicon.png" class="logo" alt="图片Base64在线转换工具">
-      转换图片为Base64编码
+      <img src="./imgaes/favicon.png" class="logo" alt="图片Base64在线转换工具"> 转换图片为Base64编码
     </h2>
 
     <section class="content">
@@ -32,15 +32,25 @@
       <input type="file" onchange="previewFile()">
     </div>
     <div class="code-preview">
-      <textarea id="code" ></textarea>
+      <textarea id="code"></textarea>
       <button id="cut" class="copy">
         一键复制
-    </button>
+      </button>
     </div>
 
   </div>
   <script src="./js/clipboard.min.js"></script>
   <script src="./js/main.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100358680-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-100358680-3');
+  </script>
+
 </body>
 
 </html>
