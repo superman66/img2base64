@@ -10,7 +10,7 @@ function previewFile() {
     function() {
       img.src = reader.result
       codeContainer.value = reader.result
-      cut.setAttribute('data-clipboard-text', reader.result)
+      copy(reader.result)
     },
     false,
   )
@@ -20,10 +20,17 @@ function previewFile() {
   }
 }
 
-var clipboard = new ClipboardJS('#cut')
-clipboard.on('success', function(e) {
-  console.log(e)
-})
-clipboard.on('error', function(e) {
-  console.log(e)
-})
+function copy(code) {
+  var clipboard = new ClipboardJS('#cut', {
+    text: function() {
+      return code
+    },
+  })
+
+  clipboard.on('success', function(e){
+    alert('复制成功');
+  })
+  clipboard.on('error', function(e){
+    alert('复制失败');
+  })
+}
