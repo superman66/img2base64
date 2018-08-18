@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://base64.chenhuichao.com/sitemap.xml
